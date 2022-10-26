@@ -1,0 +1,39 @@
+﻿@model Trophys
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <h2 class="text-primary"> Add Trophy</h2>
+        <hr />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Name">Trophy Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description"> Description</label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="StartDate">Start Date</label>
+        <input asp-for="StartDate" class="form-control" />
+        <span asp-validation-for="StartDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="EndDate">End Date</label>
+        <input asp-for="EndDate" class="form-control" />
+        <span asp-validation-for="EndDate" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success" style="width:150px">Create</button>
+    <a asp-controller="Trophy" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Go Back
+    </a>
+
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }
+

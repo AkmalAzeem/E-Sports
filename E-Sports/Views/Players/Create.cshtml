@@ -1,0 +1,42 @@
+﻿@model Players
+<form method="post"> 
+    <div class="border p-3 mt-4">
+        <h2 class="text-primary"> Add Player</h2>
+        <hr />
+    </div>
+    <div class="mb-3">
+        <label asp-for="FisrtName">First Name</label>
+        <input asp-for="FisrtName" class="form-control" />
+        <span asp-validation-for="FisrtName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Age">Age</label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Baseprice">Base Price</label>
+        <input asp-for="Baseprice" class="form-control" />
+        <span asp-validation-for="Baseprice" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" class="form-control" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success" style="width:150px">Create</button>
+    <a asp-controller="Players" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Go Back
+    </a>
+
+</form>
+@section Scripts{
+@{
+        <partial name="_ValidationScriptsPartial" />
+}
+}

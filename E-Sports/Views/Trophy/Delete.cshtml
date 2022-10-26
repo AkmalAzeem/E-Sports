@@ -1,0 +1,34 @@
+﻿@model Trophys
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <h2 class="text-primary"> Delete Trophy </h2>
+        <hr />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Name">Trophy Name</label>
+        <input asp-for="Name" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="StartDate">Start Date</label>
+        <input asp-for="StartDate" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="EndDate">End Date</label>
+        <input asp-for="EndDate" disabled class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+    <a asp-controller="Trophy" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Go Back
+    </a>
+
+</form>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }

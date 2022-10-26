@@ -1,0 +1,38 @@
+﻿@model Players
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden/>
+    <div class="border p-3 mt-4">
+        <h2 class="text-primary"> Delete Players </h2>
+        <hr />
+    </div>
+    <div class="mb-3">
+        <label asp-for="FisrtName">First Name</label>
+        <input asp-for="FisrtName" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="LastName">Last Name</label>
+        <input asp-for="LastName" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Age">Age</label>
+        <input asp-for="Age" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Baseprice">Base Price</label>
+        <input asp-for="Baseprice" disabled class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" disabled class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+    <a asp-controller="Players" asp-action="Index" class="btn btn-secondary" style="width:150px">
+        Go Back
+    </a>
+
+</form>
+@section Scripts{
+@{
+        <partial name="_ValidationScriptsPartial" />
+}
+}
